@@ -1,0 +1,6 @@
+site_name: Spike + Loop Wiki
+nav:
+- Home: index.md
+- Calibrating Spike: calibration.md
+- Build: build.md
+- Resources: resources.md
