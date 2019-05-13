@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Spike + Loop Wiki</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=".">Spike + Loop Wiki</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href=".">Home</a>
+                            </li>
+                            <li >
+                                <a href="calibration/">Calibrating Spike</a>
+                            </li>
+                            <li >
+                                <a href="build/">Build</a>
+                            </li>
+                            <li >
+                                <a href="resources/">Resources</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="calibration/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#spike-loop-wiki">Spike + Loop Wiki</a></li>
+            <li><a href="#system-requirements">System Requirements</a></li>
+            <li><a href="#loop-version-requirements">Loop Version Requirements</a></li>
+            <li><a href="#a-quick-note-about-git-and-github">A Quick Note About Git and GitHub</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="spike-loop-wiki">Spike + Loop Wiki</h1>
+<p>This is a step-by-step guide on integrating the Spike client into any branch you're using. By implementing this method you agree to read the file SPIKE_CALIBRATION included in each version of this client (as well as under the Calibration page of this wiki) before proceeding, understand that you are integrating this client at your own risk, and agree not to use this client to make any medical decisions.</p>
+<h2 id="system-requirements">System Requirements</h2>
+<p>You must have :</p>
+<ul>
+<li>
+<p>Xcode 10.2 minimum</p>
+</li>
+<li>
+<p>iOS 12.2 minimum</p>
+</li>
+<li>
+<p>macOS 10.14.3 minimum</p>
+</li>
+<li>
+<p>Most recent version of HomeBrew</p>
+</li>
+<li>
+<p>Most recent version of Carthage</p>
+</li>
+</ul>
+<h2 id="loop-version-requirements">Loop Version Requirements</h2>
+<p>The branch you're using must be compatible with Xcode 10.2. For Loop-master, the required code updates were done early March 2019. Loop-omnipod-testing was released after the 10.2 update, and therefore is compatible. Any Loop version you wish to use <strong>must</strong> be from March 2019 at the latest, or you must do the necessary code edits to make the desired version compatible.</p>
+<h2 id="a-quick-note-about-git-and-github">A Quick Note About Git and GitHub</h2>
+<p>In order to keep this guide a little cleaner, I'm opting to show you methods that use a fair amount of Terminal. Don't worry, you'll get comfortable with it very quickly. Remember to pay very close attention to where things are marked "YOUR_USERNAME" or "FOLDER_NAME", for example. Be very careful to change them when necessary.</p>
+<p>One thing we'll be using frequently is Git. Git is what's called a "version control system" ; it helps you organise, manage, and distribute your projects. When you installed the Xcode command line tools, you also installed Git. But just to make sure it all went well, open up Terminal and type <code>git --version</code>. If Git isn't installed, it will prompt you to install it.</p>
+<p>Git also helps us connect to GitHub via the Terminal. You'll be able to upload things to GitHub all in one go by using this method, which keeps us from making mistakes when using the desktop uploader in GitHub. In order to do this though, we have to use the command <code>git config</code> in Terminal. Here we'll set up the username and e-mail address you wish to associate with your code. This isn't necessarily your GitHub account username or e-mail. You can put your full name, a nickname, or keep your GitHub username if you wish.</p>
+<p>To configure Git to use your desired name in <em>all</em> git projects, in Terminal type <code>git config --global user.name "YOUR_USERNAME"</code>. You can double check that it worked by typing <code>git config --global user.name</code>.</p>
+<p>To configure Git to your desired e-mail address in <em>all</em> git projects, in Terminal type <code>git config --global user.email "YOUR@EMAIL.COM"</code>. You can double check that it worked by typing <code>git config --global user.email</code>. Note that GitHub can also provide you with a custom, no-reply e-mail address. <a href="https://help.github.com/en/articles/setting-your-commit-email-address-on-github">Click here</a> to find out more.</p>
+<p>Next, we need to tell GitHub that your e-mail that you specified in Terminal is, well, yours. This may already be done if you used the same e-mail in Terminal as the one that is associated with your GitHub, but follow along just to make sure everything is good-to-go.</p>
+<ol>
+<li>
+<p>Log into GitHub in your web browser and click on your user icon, found in upper righthand corner of your screen.</p>
+</li>
+<li>
+<p>Click "settings", and in the left sidebar, click "Emails".</p>
+</li>
+<li>
+<p>In your e-mail addresses, click "Add" and type in the e-mail you used in Terminal.</p>
+</li>
+<li>
+<p>Log into your e-mail account to verify your e-mail address with GitHub.</p>
+</li>
+<li>
+<p>In the "Primary email address" list, select the email address you'd like to associate with your web-based Git operations.</p>
+</li>
+<li>
+<p>To keep your email address private when performing web-based Git operations, click "Keep my email address private".</p>
+</li>
+</ol>
+<h3 id="all-set-lets-get-started">All set ? Let's get started.</h3></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-05-13 22:29:18
+-->
