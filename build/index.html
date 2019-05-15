@@ -165,8 +165,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>git clone https://github.com/cyoung1024/spike-client-swift-195 --branch master --single-branch spike-master</code></td>
-<td><code>git clone https://github.com/cyoung1024/spike-client-swift-195 --branch omni --single-branch spike-omni</code></td>
+<td><code>git clone https://github.com/cyoung1024/spike-client-swift-195 --branch master --single-branch master</code></td>
+<td><code>git clone https://github.com/cyoung1024/spike-client-swift-195 --branch omni --single-branch omni</code></td>
 </tr>
 </tbody>
 </table>
@@ -221,8 +221,8 @@
 </thead>
 <tbody>
 <tr>
-<td><code>cd spike-master</code></td>
-<td><code>cd spike-omni</code></td>
+<td><code>cd ~/spike-master</code></td>
+<td><code>cd ~/spike-omni</code></td>
 </tr>
 <tr>
 <td><code>git init</code></td>
@@ -245,12 +245,12 @@
 <td><code>git remote -v</code>  (make sure the URLs match)</td>
 </tr>
 <tr>
-<td><code>git push -set-upstream origin my-master</code></td>
-<td><code>git push --set-upstream origin my-omni</code></td>
+<td><code>git push -set-upstream origin master</code></td>
+<td><code>git push --set-upstream origin omni</code></td>
 </tr>
 </tbody>
 </table>
-<p>In the last step, <code>my-master</code> and <code>my-omni</code> are the names of the new branches - of your new branch. If you wish to name them something else, like for example to have consistency with the specific version of Loop you're integrating into, you can name it something like <code>dev</code> or <code>jojo</code>.</p>
+<p>In the last step, <code>master</code> is the name of your branch. If you wish to name it something else, like for example to have consistency with the specific version of Loop you're integrating into, you can name it something like <code>dev</code> or <code>jojo</code>.</p>
 <blockquote>
 <p>If Terminal tells you the origin already exists when preforming the step <code>git remote add origin &lt;url&gt;</code>, type <code>git remote rm origin</code>, then do the step <code>git remote add origin &lt;url&gt;</code> again.
 </p>
@@ -263,6 +263,7 @@
 <h2 id="update-the-cartfile-of-loop">Update the Cartfile of Loop</h2>
 <p>Now we have to tell Carthage where to go. In the Cartfile of your Loop version, type :</p>
 <p><code>github "YOUR_USERNAME/spike-client-swift-195" "YOUR_SPIKE_BRANCH'S_NAME"</code></p>
+<p>For example, mine is <code>github "cyoung1024/spike-client-swift-195" "master"</code></p>
 <p>Save, quit, and do the same in the Cartfile.resolved.</p>
 <h2 id="carthage-update-for-loop">Carthage update for Loop</h2>
 <p>Now we have to run another Carthage update. Depending on whether you git cloned or downloaded the ZIP file of your Loop version, the Carthage update command will change.</p>
@@ -275,7 +276,11 @@
 </thead>
 <tbody>
 <tr>
-<td><code>cd FOLDER_NAME &amp;&amp; carthage update</code></td>
+<td><code>cd</code></td>
+<td><code>cd</code></td>
+</tr>
+<tr>
+<td><code>cd ~/FOLDER_NAME &amp;&amp; carthage update</code></td>
 <td>  <code>cd ~/downloads/FOLDER_NAME &amp;&amp; carthage update</code></td>
 </tr>
 </tbody>
@@ -286,7 +291,7 @@
 <p>A little further down you'll notice the constant <code>allCGMManagers</code> being delcared, with the required syntax being <code>CGMManager.Type</code>. Add Spike to the list by typing : <code>SpikeClientManager.self</code>.</p>
 <h2 id="add-the-spike-frameworks">Add the Spike frameworks</h2>
 <p>Time to use the Spike frameworks that Carthage went and got for us. </p>
-<p>At the top of the project manager pane you'll see "Loop" with the Xcode project symbol next to it. Click on that. Along the top of the screen, right under the name of the project, you'll see a range of tabs listed horizontally, such as "General", "Capabilities", "Resource tags"... Find "Build Phases" and click on it. You'll see a list of options appear. Near the bottom you'll see "Copy Frameworks with Carthage". Click on that.</p>
+<p>At the top of the project manager pane you'll see "Loop" with the app icon symbol next to it, under TARGETS. Click on that. Along the top of the screen, right under the name of the project, you'll see a range of tabs listed horizontally, such as "General", "Capabilities", "Resource tags"... Find "Build Phases" and click on it. You'll see a list of options appear. Near the bottom you'll see "Copy Frameworks with Carthage". Click on that.</p>
 <p>Under "Input Files", you'll see a bunch of things that start with <code>$SCROOT/Carthage/Build</code>. All of those files are the frameworks that we asked Carthage to get. We're going to add the Spike client and its UI onto the list, so that Loop can access the files while it's building and running.</p>
 <p>Click on the <code>+</code> and type :</p>
 <p><code>$SCROOT/Carthage/Build/iOS/SpikeClient.framework</code></p>
@@ -295,8 +300,6 @@
 <p>We've added a reference into the CGM manager, added a reference to the frameworks, now all we have left is to link the files themselves into Loop.</p>
 <p>Under that same "Build Phases" tab you'll also see "Link Binary With Libraries". Click on that, and scroll down to the <code>+</code> button. You'll be asked to select the files. We're looking for that same <code>SpikeClient.framework</code> and <code>SpikeClientUI.framework</code> we just referenced in the last step.</p>
 <p>Click <code>Add other...</code> and navigate into your Loop folder. Go into Carthage &gt; Build &gt; iOS and scroll all the way down until you find the <code>SpikeClient.framework</code> and the <code>SpikeClientUI.framework</code>. Select the <code>.framework</code>, not the <code>.framework.dSYM</code>. We want the one whose icon kind of looks like a Lego.</p>
-<p>You can select both the <code>SpikeClient</code> and the <code>SpikeClientUI</code> at the same time by holding down <code>shift</code> and clicking on the second file as well.</p>
-<p>Click <code>open</code>. Your frameworks should both be on the list now. Double, triple, quadruple check that they're both there if you did the <code>shift+click</code> method. Yes, I'm speaking from experience. It took me almost <strong><em>three hours</em></strong> to realize why it wasn't working.</p>
 <h2 id="edit-infoplist">Edit info.plist</h2>
 <p>Almost done ! We need to edit the version of Loop you're using so that, if you ever need help, you and everyone can be certain of the branch of Loop that's being used. Since you added in the Spike client, we need to denote that.</p>
 <p>The easiest way, in my humble opinion, is just going to the targets (i.e. Loop and WatchApp) and editing the version from there. Click on the target, and under General &gt; Identity &gt; Version, and add <code>-spike</code>. The info.plist will automatically update to reflect your changes. You can make sure it did by navigating into Loop &gt; info.plist, and WatchApp &gt; info.plist.</p>
