@@ -7,11 +7,11 @@
         
         
         
-        <link rel="shortcut icon" href="/img/favicon.ico">
-        <title>Spike + Loop Wiki</title>
-        <link href="/css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>The Spike Branches - Spike + Loop Wiki</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="/js/jquery-1.10.2.min.js" defer></script>
-        <script src="/js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/.">Spike + Loop Wiki</a>
+                    <a class="navbar-brand" href="..">Spike + Loop Wiki</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,31 +47,31 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="/.">Home</a>
+                                <a href="..">Home</a>
                             </li>
                             <li >
-                                <a href="/calibration/">Calibration</a>
+                                <a href="../calibration/">Calibration</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">The Spike Branches</a>
                             </li>
                             <li >
-                                <a href="/about/">The Spike Branches</a>
-                            </li>
-                            <li >
-                                <a href="/troubleshooting/">Troubleshooting</a>
+                                <a href="../troubleshooting/">Troubleshooting</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Build Your Own Spike Branch <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li >
-    <a href="/diy/getting-started/">Getting Started</a>
+    <a href="../diy/getting-started/">Getting Started</a>
 </li>
                                     
 <li >
-    <a href="/diy/build/">Build</a>
+    <a href="../diy/build/">Build</a>
 </li>
                                     
 <li >
-    <a href="/diy/resources/">Resources</a>
+    <a href="../diy/resources/">Resources</a>
 </li>
                                 </ul>
                             </li>
@@ -83,21 +83,48 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../calibration/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../troubleshooting/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#about-my-branches">About my branches</a></li>
+            <li><a href="#spike-master">Spike-master</a></li>
+            <li><a href="#spike-master-x15">Spike-master-x15</a></li>
+            <li><a href="#omnipod-spike">Omnipod-spike</a></li>
+            <li><a href="#jojo-spike">Jojo-spike</a></li>
+            <li><a href="#a-note-about-spike">A Note About Spike</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-      </div>
-    </div>
-
-
+<h1 id="about-my-branches">About my branches</h1>
+<p>Unless stated otherwise, all code done here is not by me, but by the amazing Loop community. I "specialise" in putting puzzle pieces together, and in mucking around in Terminal because, well, Terminal is fun.</p>
+<p>My branches are nothing more than the work of others, combined with the work of others. But in order to test things out before I can put them on GitHub, I unfortunately have to remove Siri capabilities, as I have a free dev account. If you'd like to add Siri back in, visit <a href="https://loopkit.github.io/loopdocs/build/code_customization/#disable-siri-capabilities">this page here</a> of the LoopDocs and just do the exact opposite of what you see.</p>
+<h3 id="spike-master"><a href="https://github.com/cyoung1024/loop/tree/spike-master">Spike-master</a></h3>
+<p>Loop master 1.9.5 with Spike client integrated</p>
+<h3 id="spike-master-x15"><a href="https://github.com/cyoung1024/loop/tree/spike-master-x15">Spike-master-x15</a></h3>
+<p>Loop master 1.9.5 with Spike client integrated and a fix for the Medtronic x15 models where, after a bolus, an erroneous message saying the pump responded unexpectedly and to retry was thrown.</p>
+<h3 id="omnipod-spike"><a href="https://github.com/cyoung1024/loop/tree/omnipod-spike">Omnipod-spike</a></h3>
+<p>Loop dev 1.10.0 with Spike client integrated</p>
+<h3 id="jojo-spike"><a href="https://github.com/cyoung1024/loop/tree/jojo-spike">Jojo-spike</a></h3>
+<p>Katie DiSimone's Loop Jojo branch with Spike client integrated, as well as the Medtronic x15 fix. Please read more <a href="https://github.com/Kdisimone/Loop/wiki?fbclid=IwAR3YXXm635cCFm70PYuP5tbfW24WqUhTuviX3bqxacOS9l4Q6C85PPDQ0pc">about the Jojo branch here</a> before proceeding with this version.</p>
+<h2 id="a-note-about-spike">A Note About Spike</h2>
+<p>Yes, for the 18 millionth time I am reminding you to <strong><em>read the Spike calibration notice before proceeding with any of these downloads</em></strong>. This document should be reviewed regularly, and religiously. You should be able to cite it in your sleep. Say it with me, folks : level, stable, and in range.</p>
+<p>You can find the notice in markdown format <a href="https://github.com/cyoung1024/Loop/blob/spike-master/SPIKE_CALIBRATION.md">here</a>, in Google docs format <a href="https://docs.google.com/document/d/1gmAJ4_NRaS6UUDnGDQbKy5klh0KB5SpHwgo6gzWM7ZU/edit?usp=sharing">here</a>, and on the Calibration tab up above.</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -105,11 +132,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "/",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="/js/base.js" defer></script>
-        <script src="/search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">

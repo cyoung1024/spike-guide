@@ -7,11 +7,11 @@
         
         
         
-        <link rel="shortcut icon" href="../img/favicon.ico">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Build - Spike + Loop Wiki</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -39,7 +39,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="..">Spike + Loop Wiki</a>
+                    <a class="navbar-brand" href="../..">Spike + Loop Wiki</a>
                 </div>
 
                 <!-- Expanded navigation -->
@@ -47,16 +47,33 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li >
-                                <a href="..">Home</a>
+                                <a href="../..">Home</a>
                             </li>
                             <li >
-                                <a href="../calibration/">Calibrating Spike</a>
-                            </li>
-                            <li class="active">
-                                <a href="./">Build</a>
+                                <a href="../../calibration/">Calibration</a>
                             </li>
                             <li >
-                                <a href="../resources/">Resources</a>
+                                <a href="../../about/">The Spike Branches</a>
+                            </li>
+                            <li >
+                                <a href="../../troubleshooting/">Troubleshooting</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Build Your Own Spike Branch <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../getting-started/">Getting Started</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Build</a>
+</li>
+                                    
+<li >
+    <a href="../resources/">Resources</a>
+</li>
+                                </ul>
                             </li>
                         </ul>
 
@@ -67,7 +84,7 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../calibration/">
+                                <a rel="next" href="../getting-started/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -84,7 +101,7 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#getting-started">Getting Started</a></li>
+        <li class="main active"><a href="#build">Build</a></li>
             <li><a href="#fork-and-clone-the-spike-client">Fork and clone the Spike client</a></li>
             <li><a href="#update-cartfile-dependencies">Update Cartfile dependencies</a></li>
             <li><a href="#carthage-update-for-spike-client">Carthage update for Spike client</a></li>
@@ -102,7 +119,7 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="build">Build</h1>
 <p>This client is provided by Bjorn Inge Berg. You can <a href="https://github.com/dabear/spike-client-swift">find his work here</a>, and you can find his <a href="https://github.com/LoopKit/Loop/pull/828">original instructions here</a>. If you plan on integrating the Spike client into the master branch of Loop (<em>Medtronic support only, no Omnipod support</em>), then you can follow this guide with either Bjorn's Spike client or my Spike client. The only difference is that my Spike client version comes with the Spike calibration file.</p>
 <p>If you plan on integrating the Spike client into a version of Loop that has Omnipod support, then you will need to follow this guide with my Spike client, as changes to the code were made to be compatible with the Omnipod branch.</p>
 <p>Here are the steps we're going to take :</p>
@@ -148,7 +165,7 @@
 </li>
 </ol>
 <h2 id="fork-and-clone-the-spike-client">Fork and clone the Spike client</h2>
-<p>You can find <a href="https://github.com/cyoung1024/spike-client-swift-195">my version of the Spike client here</a>. If you wish to integrate the client into a <em>Medtronic-only</em> version of Loop, select the <a href="https://github.com/cyoung1024/spike-client-swift-195">master branch</a>. If you wish to integrate the client into a version that <em>also</em> supports Omnnipod, select the <a href="https://github.com/cyoung1024/spike-client-swift-195/tree/omni">omni branch</a>.</p>
+<p>You can find <a href="https://github.com/cyoung1024/spike-client-swift-195">my version of the Spike client here</a>. If you wish to integrate the client into a <em>Medtronic-only</em> version of Loop, select the <a href="https://github.com/cyoung1024/spike-client-swift-195/tree/master">master branch</a>. If you wish to integrate the client into a version that also supports Omnnipod, select the <a href="https://github.com/cyoung1024/spike-client-swift-195/tree/omni">omni branch</a>.</p>
 <blockquote>
 <p>You should fork the repository (or "repo") before cloning it, so that you have a clear path of documentation that will always lead you back to the source. This will also help you keep up-to-date with potential upstream changes to the branch.
 </p>
@@ -170,16 +187,16 @@
 </tr>
 </tbody>
 </table>
-<p>The Spike client folder can be found under Users &gt; "your name". It's easier to put the file here when using Terminal because it reduces the amount of typing needed. Instead of <code>cd ~/downloads/spike-master</code>, we can just type <code>cd spike-master</code>. If you prefer a different folder location, feel free to change the working directory by typing <code>cd ~/PATH/TO/FILE</code> and hitting enter before preforming the <code>git clone</code>, so long as iCloud drive won't be uploading its contents anywhere. If you do this, just remember to navigate into that directory when following the next steps.</p>
+<p>The Spike client folder can be found under Users &gt; "your name". It's easier to put the file here when using Terminal because it reduces the amount of typing needed. Instead of <code>cd ~/downloads/spike-master</code>, we can just type <code>cd ~/spike-master</code>. If you prefer a different folder location, feel free to change the working directory by typing <code>cd ~/PATH/TO/FILE</code> and hitting enter before preforming the <code>git clone</code>, so long as iCloud drive won't be uploading its contents anywhere. If you do this, just remember to navigate into that directory when following the next steps.</p>
 <h2 id="update-cartfile-dependencies">Update Cartfile dependencies</h2>
 <p>Loop and almost all its elements are constituted of many different projects. These projects lay down the proper foundation for Loop to build successfully. For example, the project LoopKit is fundamental in Loop's inner-workings. Elements such as RileyLink, the Dexcom share client, and the Spike client rely upon it, depend upon it, in order to function properly. These dependencies are declared in what's called the Cartfile. Here we tell Carthage, the dependency manager, where to go on GitHub to find these constituting elements of Loop. Carthage then fetches that information from GitHub, clones it onto your computer, and then builds it. The result of this is also logged into the Cartfile.resolved. Those very long numbers you see at the end of each declared dependency are what we call a SHA-1. It's like a fingerprint - each one is unique, and is attributed to the version of the dependency you told Carthage to go get. This can help us make sure that we've gone and gotten the right version when we want to be vigilant, but don't worry about that for now.</p>
-<p>Because we want Loop to also depend upon the Spike client, we have to edit the Cartfile and tell Carthage where to go get it so it can import the Spike client. If you open the Spike client's Cartfile, you'll notice it has only one dependency : LoopKit. LoopKit also has its own versions, just like the master branch and the Omnipod branch. We want our Spike client to have the right framework to function properly with the intended version of Loop, so we want to tell the Spike client to use the <em>same version of LoopKit that Loop does</em>. Double check in Loop's Cartfile where Carthage should be fetching LoopKit from. For example, in the Omnipod branch, it should be <code>github "LoopKit/LoopKit" "omnipod-testing"</code> (well, at the time of writing this it should be). Copy that into the Spike client's Cartfile, then save and exit. Do the same for the Cartfile.resolved.</p>
+<p>Because we want Loop to also depend upon the Spike client, we have to edit the Cartfile and tell Carthage where to go get it so it can import the Spike client. If you open the Spike client's Cartfile, you'll notice it has only one dependency : LoopKit. LoopKit also has its own versions, just like the master branch and the Omnipod branch. We want our Spike client to have the right framework to function properly with the intended version of Loop, so we want to tell the Spike client to use the same version of LoopKit that Loop does. Double check in Loop's Cartfile where Carthage should be fetching LoopKit from. For example, in the Omnipod branch, it should be <code>github "LoopKit/LoopKit" "omnipod-testing"</code> (well, at the time of writing this it should be). Copy that into the Spike client's Cartfile, then save and exit. Do the same for the Cartfile.resolved.</p>
 <blockquote>
 <p>Note that you may have to right click on the Cartfile or the Cartfile.resolved in order to open it with TextEdit. TextEdit is usually the default editor for the Cartfile, but often the default editor for the Cartfile.resolved is Xcode. Try and be consistent with the editor you use when appending the Cartfiles.
 </p>
 </blockquote>
 <h2 id="carthage-update-for-spike-client">Carthage update for Spike client</h2>
-<p>Time to tell Carthage to do its thing. In Terminal, type : </p>
+<p>Time to tell Carthage to do its thing. In Terminal, type :</p>
 <table>
 <thead>
 <tr>
@@ -203,13 +220,13 @@
 <p>Go back to your Cartfile and make sure that the LoopKit dependency you declared definitely matches the one that your desired version of Loop is using. If it isn't, update it, be sure to save, and run another Carthage update.</p>
 </li>
 <li>
-<p>If you're getting messages such as <code>Type [foo] does not conform to protocol [bar]</code>, or <code>Use of unresolved identifier</code>, that's a little more of a pain in the butt. You're unfortunately going to have to open up the Dexcom-share-client-swift of the desired Loop project, and check in there for compatibility.</p>
+<p>If you're getting messages such as <code>Type [foo] does not conform to protocol [bar],</code> or <code>Use of unresolved identifier</code>, that's a little more of a pain in the butt. You're unfortunately going to have to open up the Dexcom-share-client-swift of the desired Loop project, and check in there for compatibility.</p>
 <ul>
-<li>For example, in the picture below you have the Dexcom-share-client-swift's <code>ShareClient+UI.swift</code> file on the left, and on the right is the Spike-client-swift's <code>SpikeClient+UI.swift</code>. When I was converting the Spike client to its Omnipod version, I ran into a myriad of unresolved identifiers and non-conforming types. Because I knew the Spike client is almost identical to the Dexcom share client, I opened the two up side-by-side and compared the files and lines that Xcode gave me errors on. This is just one example of something that needed to be changed.</li>
+<li>For example, in the picture below you have the Dexcom-share-client-swift's <code>ShareClient+UI.swift</code> file on the left at omni, and on the right is the Spike-client-swift's <code>SpikeClient+UI.swift</code> at master. When I was converting the Spike client to its Omnipod version, I ran into a myriad of unresolved identifiers and non-conforming types. Because I knew the Spike client is almost identical to the Dexcom share client, I opened the two up side-by-side and compared the files and lines that Xcode gave me errors on. This is just one example of something that needed to be changed.</li>
 </ul>
-<p><img alt="Dex-v-Spike" src="img/https://www.dropbox.com/s/yewv27d84idq6a2/Dex_omni-vs-Spike_master.png?dl=0" title="Dex-v-Spike" /></p>
 </li>
 </ul>
+<p><img alt="Dex-vs-Spike" src="../img/dexvsspike.png" title="Dex-vs-Spike" /></p>
 <h2 id="push-changes-to-github">Push changes to GitHub</h2>
 <p>This is the fun part. Ready ? In Terminal, type :</p>
 <table>
@@ -242,15 +259,15 @@
 </tr>
 <tr>
 <td><code>git remote -v</code> (make sure the URLs match)</td>
-<td><code>git remote -v</code>  (make sure the URLs match)</td>
+<td><code>git remote -v</code> (make sure the URLs match)</td>
 </tr>
 <tr>
-<td><code>git push -set-upstream origin master</code></td>
+<td><code>git push --set-upstream origin master</code></td>
 <td><code>git push --set-upstream origin omni</code></td>
 </tr>
 </tbody>
 </table>
-<p>In the last step, <code>master</code> is the name of your branch. If you wish to name it something else, like for example to have consistency with the specific version of Loop you're integrating into, you can name it something like <code>dev</code> or <code>jojo</code>.</p>
+<p>In the last step, <code>master</code> or <code>omni</code> is the name of your branch. If you wish to name it something else, like for example to have consistency with the specific version of Loop you're integrating into, you can name it something like <code>dev</code> or <code>jojo</code>.</p>
 <blockquote>
 <p>If Terminal tells you the origin already exists when preforming the step <code>git remote add origin &lt;url&gt;</code>, type <code>git remote rm origin</code>, then do the step <code>git remote add origin &lt;url&gt;</code> again.
 </p>
@@ -261,7 +278,7 @@
 <p>You can either download your new copy of Loop with the ZIP file method, or we can do the same thing we did earlier with the Spike client : fork Loop (if you never had before), open up Temrinal, and git clone it.</p>
 <p>To git clone Loop's dev branch, for example, you would type :  <code>git clone https://github.com/LoopKit/loop --branch dev --single-branch dev</code></p>
 <h2 id="update-the-cartfile-of-loop">Update the Cartfile of Loop</h2>
-<p>Now we have to tell Carthage where to go. In the Cartfile of your Loop version, type :</p>
+<p>Now we have to tell Carthage where to go to find the Spike client. In the Cartfile of your Loop version, type :</p>
 <p><code>github "YOUR_USERNAME/spike-client-swift-195" "YOUR_SPIKE_BRANCH'S_NAME"</code></p>
 <p>For example, mine is <code>github "cyoung1024/spike-client-swift-195" "master"</code></p>
 <p>Save, quit, and do the same in the Cartfile.resolved.</p>
@@ -276,12 +293,12 @@
 </thead>
 <tbody>
 <tr>
-<td><code>cd</code></td>
-<td><code>cd</code></td>
+<td>cd</td>
+<td>cd</td>
 </tr>
 <tr>
 <td><code>cd ~/FOLDER_NAME &amp;&amp; carthage update</code></td>
-<td>  <code>cd ~/downloads/FOLDER_NAME &amp;&amp; carthage update</code></td>
+<td><code>cd ~/downloads/FOLDER_NAME &amp;&amp; carthage update</code></td>
 </tr>
 </tbody>
 </table>
@@ -290,7 +307,7 @@
 <p>At the top of the file, you'll see a bunch of frameworks being imported via the declaration <code>import LoopKit</code>, or <code>import ShareClient</code>. We also want to import something : the Spike client. Click at the end of the last framework being imported, hit enter, and type <code>import SpikeClient</code>.</p>
 <p>A little further down you'll notice the constant <code>allCGMManagers</code> being delcared, with the required syntax being <code>CGMManager.Type</code>. Add Spike to the list by typing : <code>SpikeClientManager.self</code>.</p>
 <h2 id="add-the-spike-frameworks">Add the Spike frameworks</h2>
-<p>Time to use the Spike frameworks that Carthage went and got for us. </p>
+<p>Time to use the Spike frameworks that Carthage went and got for us.</p>
 <p>At the top of the project manager pane you'll see "Loop" with the app icon symbol next to it, under TARGETS. Click on that. Along the top of the screen, right under the name of the project, you'll see a range of tabs listed horizontally, such as "General", "Capabilities", "Resource tags"... Find "Build Phases" and click on it. You'll see a list of options appear. Near the bottom you'll see "Copy Frameworks with Carthage". Click on that.</p>
 <p>Under "Input Files", you'll see a bunch of things that start with <code>$SCROOT/Carthage/Build</code>. All of those files are the frameworks that we asked Carthage to get. We're going to add the Spike client and its UI onto the list, so that Loop can access the files while it's building and running.</p>
 <p>Click on the <code>+</code> and type :</p>
@@ -311,7 +328,7 @@
 <p>Yes, <em>finally</em> build and launch ! Assign all your targets, select your phone in the active scheme, make sure your screen is left on, and hit play.</p>
 <p>Remember, if you run into any troubles, click on the red errors and scroll all the way down to see what's happening. Just like in Terminal during a carthage update, a log will be printed, so if Xcode isn't detailed enough you can highlight the log's path, open Terminal, type <code>open</code>, paste, and enter to find out more.</p>
 <h3 id="pat-yourself-on-the-back">Pat yourself on the back !</h3>
-<p>I hope this guide was clear and that maybe, just maybe, you enjoyed doing this. If you'd like to learn more about Xcode, Swift, Git, and more, check out the Resources tab at the top of the page. Happy looping !</p></div>
+<p>I hope this guide was clear and that maybe, just maybe, you enjoyed doing this. If you'd like to learn more about Xcode, Swift, Git, and more, check out the Resources tab under this DIY section. Happy looping !</p></div>
         </div>
 
         <footer class="col-md-12">
@@ -319,11 +336,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
     <div class="modal-dialog">
