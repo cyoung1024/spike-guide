@@ -311,8 +311,8 @@
 <p>At the top of the project manager pane you'll see "Loop" with the app icon symbol next to it, under TARGETS. Click on that. Along the top of the screen, right under the name of the project, you'll see a range of tabs listed horizontally, such as "General", "Capabilities", "Resource tags"... Find "Build Phases" and click on it. You'll see a list of options appear. Near the bottom you'll see "Copy Frameworks with Carthage". Click on that.</p>
 <p>Under "Input Files", you'll see a bunch of things that start with <code>$SCROOT/Carthage/Build</code>. All of those files are the frameworks that we asked Carthage to get. We're going to add the Spike client and its UI onto the list, so that Loop can access the files while it's building and running.</p>
 <p>Click on the <code>+</code> and type :</p>
-<p><code>$SCROOT/Carthage/Build/iOS/SpikeClient.framework</code></p>
-<p><code>$SCROOT/Carthage/Build/iOS/SpikeClientUI.framework</code></p>
+<p><code>$(SRCROOT)/Carthage/Build/iOS/SpikeClient.framework</code></p>
+<p><code>$(SRCROOT)/Carthage/Build/iOS/SpikeClientUI.framework</code></p>
 <h2 id="link-binaries">Link binaries</h2>
 <p>We've added a reference into the CGM manager, added a reference to the frameworks, now all we have left is to link the files themselves into Loop.</p>
 <p>Under that same "Build Phases" tab you'll also see "Link Binary With Libraries". Click on that, and scroll down to the <code>+</code> button. You'll be asked to select the files. We're looking for that same <code>SpikeClient.framework</code> and <code>SpikeClientUI.framework</code> we just referenced in the last step.</p>
