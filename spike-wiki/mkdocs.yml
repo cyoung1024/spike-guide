@@ -1,0 +1,10 @@
+site_name: Spike + Loop Wiki
+nav:
+- Home: 'index.md'
+- Calibration: 'calibration.md'
+- The Spike Branches: 'about.md'
+- Troubleshooting: 'troubleshooting.md'
+- Build Your Own Spike Branch:
+  - 'Getting Started': 'diy/getting-started.md'
+  - 'Build': 'diy/build.md'
+  - 'Resources': 'diy/resources.md'
