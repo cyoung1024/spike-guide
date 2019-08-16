@@ -16,12 +16,6 @@ Loop dev 1.10.0 with Spike client integrated
 ### [Dev-spike](https://github.com/cyoung1024/loop/tree/dev-spike)
 Loop dev branch with Spike client integrated. Does not have Medtronic x15 fix and includes Siri capabilities.
 
-### [Jojo-spike](https://github.com/cyoung1024/loop/tree/jojo-spike)
-Katie DiSimone's Loop Jojo branch with Spike client integrated, as well as the Medtronic x15 fix. Please read more [about the Jojo branch here](https://github.com/Kdisimone/Loop/wiki?fbclid=IwAR3YXXm635cCFm70PYuP5tbfW24WqUhTuviX3bqxacOS9l4Q6C85PPDQ0pc) before proceeding with this version.
-
-### [Jojo-beeps-spike](https://github.com/cyoung1024/Loop/tree/jojo-beeps-spike)
-Katie DiSimone's Loop jojo-beeps branch with Spike client integrated. The jojo-beeps branch combines Katie's Jojo work (which you can [read about here](https://github.com/Kdisimone/Loop/wiki?fbclid=IwAR3YXXm635cCFm70PYuP5tbfW24WqUhTuviX3bqxacOS9l4Q6C85PPDQ0pc)) and a feature which makes a pod beep at the start and end of a bolus. Since this branch is geared towards Omnipod, there is no x15 fix. The beep feature does not pertain to / affect Medtronic pumps. Siri capabilites *have **not** been removed* in this branch, unlike my other branches.
-
 ## A Note About Spike
 Yes, for the 18 millionth time I am reminding you to ***read the Spike calibration notice before proceeding with any of these downloads***. This document should be reviewed regularly, and religiously. You should be able to cite it in your sleep. Say it with me, folks : level, stable, and in range.
 
