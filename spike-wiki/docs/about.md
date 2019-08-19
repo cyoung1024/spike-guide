@@ -8,10 +8,10 @@ My branches are nothing more than the work of others, combined with the work of 
 Loop master 1.9.6 with Spike client integrated
 
 ### [Spike-master-x15](https://github.com/cyoung1024/loop/tree/spike-master-x15)
-Loop master 1.9.5 with Spike client integrated and a fix for the Medtronic x15 models where, after a bolus, an erroneous message saying the pump responded unexpectedly and to retry was thrown.
+Loop master 1.9.6 with Spike client integrated and a fix for the Medtronic x15 models where, after a bolus, an erroneous message saying the pump responded unexpectedly and to retry was thrown.
 
 ### [Omnipod-spike](https://github.com/cyoung1024/loop/tree/omnipod-spike)
-Loop dev 1.10.0 with Spike client integrated
+Loop dev 1.10.1 with Spike client integrated
 
 ### [Dev-spike](https://github.com/cyoung1024/loop/tree/dev-spike)
 Loop dev branch with Spike client integrated. Does not have Medtronic x15 fix and includes Siri capabilities.
