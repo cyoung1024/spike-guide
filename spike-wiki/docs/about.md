@@ -14,7 +14,7 @@ Loop master 1.9.6 with Spike client integrated and a fix for the Medtronic x15 m
 Loop dev 1.10.0 with Spike client integrated
 
 ### [Dev-spike](https://github.com/cyoung1024/loop/tree/dev-spike)
-Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix and includes Siri capabilities.
+Loop dev with Spike client integrated. Does not have Medtronic x15 fix and includes Siri capabilities.
 
 ### [Jojo-spike](https://github.com/cyoung1024/loop/tree/jojo-spike)
 Katie DiSimone's Jojo branch with Spike client integrated. Includes the Medtronic x15 fix.
