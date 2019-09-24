@@ -31,4 +31,4 @@ Yes, for the 18 millionth time I am reminding you to ***read the Spike calibrati
 You can find the notice in markdown format [here](https://github.com/cyoung1024/Loop/blob/spike-master/SPIKE_CALIBRATION.md), in Google docs format [here](https://docs.google.com/document/d/1gmAJ4_NRaS6UUDnGDQbKy5klh0KB5SpHwgo6gzWM7ZU/edit?usp=sharing), and on the Calibration tab up above.
 
 ## Updating your Build
-Please visit [this page of the LoopDocs](https://loopkit.github.io/loopdocs/build/update/updating/) for detailed instructions.
+Please visit [this page of the LoopDocs](https://loopkit.github.io/loopdocs/build/updating/) for detailed instructions.
