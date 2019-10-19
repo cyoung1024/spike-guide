@@ -3,25 +3,25 @@
 Unless stated otherwise, all code done here is not by me, but by the amazing Loop community. I "specialise" in putting puzzle pieces together, and in mucking around in Terminal because, well, Terminal is fun. My branches are nothing more than the work of others, combined with the work of others.
 
 ### [Spike-master](https://github.com/cyoung1024/loop/tree/spike-master)
-Loop master 1.9.6 with Spike client integrated
+Loop master 1.9.6 with Spike client integrated.
 
 ### [Spike-master-x15](https://github.com/cyoung1024/loop/tree/spike-master-x15)
 Loop master 1.9.6 with Spike client integrated and a fix for the Medtronic x15 models where, after a bolus, an erroneous message saying the pump responded unexpectedly and to retry was thrown.
 
 ### [Omnipod-spike](https://github.com/cyoung1024/loop/tree/omnipod-spike)
-Loop dev 1.10.0 with Spike client integrated
+Loop dev 1.10.0 with Spike client integrated.
 
 ### [Dev-spike](https://github.com/cyoung1024/loop/tree/dev-spike)
-Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix and includes Siri capabilities.
+Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix.
 
 ### [Dev-spike-x15](https://github.com/cyoung1024/loop/tree/dev-spike-x15)
-Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix and includes Siri capabilities.
+Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix.
 
 ### [Jojo-spike](https://github.com/cyoung1024/loop/tree/jojo-spike)
 Katie DiSimone's Jojo branch with Spike client integrated. Includes the Medtronic x15 fix.
 
 ### [Jojo-beeps-spike](https://gitub.com/cyoung1024/loop/tree/jojo-beeps-spike)
-Katie DiSimone's Jojo-beeps branch with Spike client integrated. Does not include the Medtronic x15 fix, as the branch is geared towards an Omnipod feature where the pod beeps to confirm bolus delivery. Includes Siri capabilities.
+Katie DiSimone's Jojo-beeps branch with Spike client integrated. Does not include the Medtronic x15 fix, as the branch is geared towards an Omnipod feature where the pod beeps to confirm bolus delivery.
 
 ## A Note About Spike
 Yes, for the 18 millionth time I am reminding you to ***read the Spike calibration notice before proceeding with any of these downloads***. This document should be reviewed regularly, and religiously. You should be able to cite it in your sleep. Say it with me, folks : level, stable, and in range.
