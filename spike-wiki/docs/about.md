@@ -1,8 +1,6 @@
 # About my branches
 
-Unless stated otherwise, all code done here is not by me, but by the amazing Loop community. I "specialise" in putting puzzle pieces together, and in mucking around in Terminal because, well, Terminal is fun.
-
-My branches are nothing more than the work of others, combined with the work of others. But in order to test things out before I can put them on GitHub, I unfortunately have to remove Siri capabilities, as I have a free dev account. If you'd like to add Siri back in, visit [this page here](https://loopkit.github.io/loopdocs/build/code_customization/#disable-siri-capabilities) of the LoopDocs and just do the exact opposite of what you see.
+Unless stated otherwise, all code done here is not by me, but by the amazing Loop community. I "specialise" in putting puzzle pieces together, and in mucking around in Terminal because, well, Terminal is fun. My branches are nothing more than the work of others, combined with the work of others.
 
 ### [Spike-master](https://github.com/cyoung1024/loop/tree/spike-master)
 Loop master 1.9.6 with Spike client integrated

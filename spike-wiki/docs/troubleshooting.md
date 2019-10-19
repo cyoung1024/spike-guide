@@ -1,6 +1,6 @@
 # Loop not getting Spike data ? Try some of these fixes.
 >
-> Note that ***you will not get Spike readings as expected when using a simulator pump*** in Loop. In order for Loop to pull Spike data in the expected manner, a physical pump needs to be paired with the Loop app.
+> Note that ***you will not get Spike readings as expected when using a simulator pump*** in Loop. In order for Loop to pull Spike data in the expected manner, ***a physical pump needs to be paired with the Loop app***.
 > If you're still waiting for your RileyLink to arrive and have Spike paired with Health at the moment in order to get some data into Loop, remember to ***disable Health capabilities in Spike*** when connecting your pump to Loop for the first time.
 >
 ### Make sure that Spike is active in the background
