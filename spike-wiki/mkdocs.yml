@@ -11,5 +11,6 @@ nav:
   - 'Resources': 'diy/resources.md'
 markdown_extensions:
   - admonition
+theme: cinder
 extra_javascript:
   - 'js/refreshUpdatesRepo.js'
