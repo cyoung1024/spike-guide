@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Troubleshooting - Spike + Loop Wiki</title>
+        <title>FAQ - Spike + Loop Wiki</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,8 +49,8 @@
                             <li >
                                 <a href="..">Home</a>
                             </li>
-                            <li >
-                                <a href="../faq/">FAQ</a>
+                            <li class="active">
+                                <a href="./">FAQ</a>
                             </li>
                             <li >
                                 <a href="../calibration/">Calibration</a>
@@ -58,8 +58,8 @@
                             <li >
                                 <a href="../about/">The Spike Branches</a>
                             </li>
-                            <li class="active">
-                                <a href="./">Troubleshooting</a>
+                            <li >
+                                <a href="../troubleshooting/">Troubleshooting</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Build Your Own Spike Branch <b class="caret"></b></a>
@@ -87,12 +87,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../about/">
+                                <a rel="next" href="..">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../diy/getting-started/">
+                                <a rel="prev" href="../calibration/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -104,71 +104,57 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#loop-not-getting-spike-data-try-some-of-these-fixes">Loop not getting Spike data ? Try some of these fixes.</a></li>
-            <li><a href="#make-sure-that-spike-is-active-in-the-background">Make sure that Spike is active in the background</a></li>
-            <li><a href="#spike-is-updating-but-loop-isnt">Spike is updating, but Loop isn't</a></li>
-            <li><a href="#delayed-cgm-data-but-green-loop">Delayed CGM data, but green loop</a></li>
-            <li><a href="#still-not-working">Still not working ?</a></li>
+        <li class="main active"><a href="#spike-faq">SPIKE FAQ</a></li>
+            <li><a href="#whats-a-spike-branch">What’s a Spike branch</a></li>
+            <li><a href="#what-branch-should-i-use">What branch should I use</a></li>
+            <li><a href="#does-the-spike-branch-have">Does the Spike branch have...</a></li>
+            <li><a href="#does-spike-work-offline">Does Spike work offline</a></li>
+            <li><a href="#theres-a-cloud-icon-though">There’s a cloud icon though</a></li>
+            <li><a href="#whats-my-username-password">What’s my username &amp; password</a></li>
+            <li><a href="#whats-x15">What’s x15</a></li>
+            <li><a href="#what-do-i-do-if-spike-is-wrong">What do I do if Spike is wrong</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="loop-not-getting-spike-data-try-some-of-these-fixes">Loop not getting Spike data ? Try some of these fixes.</h1>
-<blockquote>
-<p>Note that <strong><em>you will not get Spike readings as expected when using a simulator pump</em></strong> in Loop. In order for Loop to pull Spike data in the expected manner, <strong><em>a physical pump needs to be paired with the Loop app</em></strong>.
-If you're still waiting for your RileyLink to arrive and have Spike paired with Health at the moment in order to get some data into Loop, remember to <strong><em>disable Health capabilities in Spike</em></strong> when connecting your pump to Loop for the first time.
+<h1 id="spike-faq">SPIKE FAQ</h1>
+<h2 id="whats-a-spike-branch">What’s a Spike branch</h2>
+<p>A Spike branch is a version of Loop that allows you to use Spike as your CGM source.</p>
+<h2 id="what-branch-should-i-use">What branch should I use</h2>
+<p>That’s a very personal decision that only you can make. A Spike branch is the same as its original version, but with the added CGM option. Make your decision as you normally would with the LoopDocs, and come back here to find its Spike equivalent.</p>
+<h2 id="does-the-spike-branch-have">Does the Spike branch have...</h2>
+<p>Probably. I do my best to update within a few hours of an official Loop update, but sometimes it takes me a full day, maybe a few if there’s merge conflicts or if it's exam season. See below for the corresponding update dates, and remember that you can always check if I’ve merged a specific Loop update by looking at the commit history in my repo.</p>
+<p>And <strong><em>please, please, please</em></strong> be considerate when asking if I’ve done updates. I’m just one, single person working on these branches. I am a student and an intern working a 40 hour week on top of studying. If you feel I’m taking too long to get an update out, I would like you kindly remind you that on the top right corner of your screen is a guide to making your own Spike branch. No one is by any means obligated to use my branches, the resources for making your own Spike version are out there. If I haven’t posted an update please wait at least a couple days after a new release before tagging me in comments, in posts, and sending me Facebook messages and e-mails. I promise it will get done.</p>
+<div>
+<p> <b> Last master update : </b> <span class="master"> </span> </br>
+<b> Last spike-master update : </b> <span class="spike-master"> </span> </br>
+<b> Last spike-master-x15 update : </b> <span class="spike-master-x15"> </span>
 </p>
-</blockquote>
-<h3 id="make-sure-that-spike-is-active-in-the-background">Make sure that Spike is active in the background</h3>
-<p>The app must be open and active in order to get readings, and thus to send them to Loop as well. If you're having connectivity issues <em>within Spike</em>, try :</p>
-<ul>
-<li>
-<p><strong>Changing the suspension prevention settings of Spike</strong>. In <code>settings &gt; advanced &gt; user defined</code>, you'll be able to select your mode. Read the instructions in that panel to determine which setting you should start with, as this changes per CGM.</p>
-</li>
-<li>
-<p><strong>iCloud settings</strong>. When the phone is plugged in, on WiFi, and the screen is off, this is when iCloud backs up your phone. This setting is turned on by default. This will sometimes disrupt Spike getting readings. The solution can either be to not plug your phone in overnight, or to disable this setting by clicking on your account from within the phone's settings, scroll to the bottom to select the phone you're using, and clicking on the iCloud settings.</p>
-</li>
-<li>
-<p><strong>Screen time</strong>. You may have a setting enabled in this menu that is forcing Spike to quit, be it during the night or the day. This menu can be found under "screen time" (I think it's called that, my phone isn't in English, sorry... it's the option underneath "Do not disturb", the purple icon with the hourglass).</p>
-</li>
-<li>
-<p><strong>Background app refresh</strong>. Under <code>general &gt; background app refresh</code>, you can make sure that Spike is enabled. Again, this may be labeled differently on a phone in English... It's the 8th option on the screen.</p>
-</li>
-</ul>
-<h3 id="spike-is-updating-but-loop-isnt">Spike is updating, but Loop isn't</h3>
-<p>More often than not, the issue lies in Apple Health. Your settings <em>must</em> be :</p>
-<ul>
-<li>
-<p>Loop : has full monopoly on reading and writing <em>all data</em></p>
-</li>
-<li>
-<p>Spike : has <em>zero</em> abilities to read or write. You can also fully disable Spike's access to Health by going into its <code>settings &gt; share</code>, and disabling Health Kit</p>
-</li>
-</ul>
-<p>See the <a href="https://loopkit.github.io/loopdocs/build/health/">LoopDocs section on Health permissions</a> for more.</p>
-<p>If your Health settings are correct, try :</p>
-<ul>
-<li>
-<p>Ensure that your <strong>Spike credentials are entered</strong>. Upon setting Spike as your CGM source after tapping <code>Add CGM</code> in Loop's settings, you will be prompted for a username and password. These are bogus credentials that can be anything you wish. For example, mine are "username" and "password".</p>
-</li>
-<li>
-<p><strong>Enable the HTTP internal server in Spike</strong>. This can be found in Spike, under  <code>settings &gt; integration</code>.</p>
-</li>
-<li>
-<p><strong>Delete Spike as your CGM source in Loop</strong>, then when reselecting Spike, delete the credentials and enter new ones. Changing this up could knock things back into place.</p>
-</li>
-<li>
-<p><strong>A simple restart</strong>. Close both Spike and Loop from the app switcher, turn the phone off and back on again, then reopen Spike and Loop in that order.</p>
-</li>
-</ul>
-<h3 id="delayed-cgm-data-but-green-loop">Delayed CGM data, but green loop</h3>
-<p>Because Spike and Loop's internal clocks aren't perfectly synced, it's not uncommon to get into a spot of looping off of 10 minute old data.</p>
-<p>For Libre users, click "on demand" in Spike to get a new reading while Loop is at 3 minutes.</p>
-<p>For Dexcom users, this "on demand" option is not available. There is a fix being tested in dev-spike to resolve this. If you're willing to keep up with frequent updates and report bugs when found, you could give dev-spike a try. But be warned that it is not as stable as a production branch.</p>
-<h3 id="still-not-working">Still not working ?</h3>
-<p>You can try a soft reset of the phone, or even delete Loop completely off of the phone and load it back on if you're in a tight spot and absolutely nothing is working, as a last ditch effort. Before you do that though, double check that your Loop app is displaying the correct version of Loop : it should be the original Loop version name plus <code>-spike</code> on the end. With all these new releases coming out, it's not unheard of that people mix up the folders or projects in Xcode and accidentally deploy the wrong version.</p>
-<p>Also, if you'd been previously using a different source - such as Dexcom Share - when you load a new version, Loop keeps all your old settings. This includes whichever CGM source you were using. You'll have to delete that CGM source in order to get Spike to show up as a CGM option.</p>
-<p>If you're still stuck, remember to <a href="https://loopkit.github.io/loopdocs/troubleshooting/overview/">check the LoopDocs</a> for any other non-Spike-specific troubleshooting steps as well.</p></div>
+<p> <b> Last omnipod-testing update : </b> <span class="omnipod-testing"> </span> </br>
+<b> Last omnipod-spike update : </b> <span class="omnipod-spike"> </span>
+</p>
+<p> <b> Last dev update : </b> <span class="dev"> </span> </br>
+<b> Last dev-spike update : </b> <span class="dev-spike"> </span> </br>
+<b> Last dev-spike-x15 update : </b> <span class="dev-spike-x15"> </span>
+</p>
+<p> <b> Last jojo update : </b> <span class="jojo"> </span> </br>
+<b> Last jojo-spike update : </b> <span class="jojo-spike"> </span>
+</p>
+<p> <b> Last jojo-beeps update : </b> <span class="jojo-beeps"> </span> </br>
+<b> Last jojo-beeps-spike update : </b> <span class="jojo-beeps-spike"> </span>
+</p>
+</div>
+
+<h2 id="does-spike-work-offline">Does Spike work offline</h2>
+<p>Yes.</p>
+<h2 id="theres-a-cloud-icon-though">There’s a cloud icon though</h2>
+<p>I know, ignore it. That’s a relic of the Dexcom Share client, which the Spike client is based off of. The URL that the Spike client is pointed to is Spike’s internal HTTP server, so no internet connection is required. This is also why it’s so important that you enable your internal HTTP server in Spike’s settings.</p>
+<h2 id="whats-my-username-password">What’s my username &amp; password</h2>
+<p>This too is a relic of the Dexcom Share client. You can put in whatever fake username and password you want. It doesn’t have to match anything you’ve set anywhere else.</p>
+<h2 id="whats-x15">What’s x15</h2>
+<p>Medtronic 15 series pumps throw an erroneous error following blouses that state that the pump responded strangely and to retry your bolus. As I myself am a 715 user I make my own x15 branches. I’ve gone ahead and published them while I’m at it. If you’re an Omnipod user or don’t have a Medtronic x15 pump, you can ignore this branch.</p>
+<h2 id="what-do-i-do-if-spike-is-wrong">What do I do if Spike is wrong</h2>
+<p>Open your loop immediately and close Spike completely. Continue with finger pokes and enter your BGs into Health, ideally every 15 minutes but personally if this happens to me I do it every half hour. Depending on the situation, either delete all calibrations in Spike and start over from zero once you’re in optimal conditions, or wait for optimal conditions to recalibrate. What are optimal conditions ? <a href="https://cyoung1024.github.io/spike-guide/calibration/">Check out the calibration guide</a>. If you have lots of sensor noise, please discontinue the use of your current sensor and start a new one. If you cannot trust your CGM readings, then please do not use Loop, be it Spike or otherwise. Use all tools at your disposition to keep you / your loved one safe. This includes stopping the use of Loop until you can trust your CGM readings again.</p></div>
         </div>
 
         <footer class="col-md-12">

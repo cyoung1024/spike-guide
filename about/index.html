@@ -50,6 +50,9 @@
                                 <a href="..">Home</a>
                             </li>
                             <li >
+                                <a href="../faq/">FAQ</a>
+                            </li>
+                            <li >
                                 <a href="../calibration/">Calibration</a>
                             </li>
                             <li class="active">
@@ -116,22 +119,21 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="about-my-branches">About my branches</h1>
-<p>Unless stated otherwise, all code done here is not by me, but by the amazing Loop community. I "specialise" in putting puzzle pieces together, and in mucking around in Terminal because, well, Terminal is fun.</p>
-<p>My branches are nothing more than the work of others, combined with the work of others. But in order to test things out before I can put them on GitHub, I unfortunately have to remove Siri capabilities, as I have a free dev account. If you'd like to add Siri back in, visit <a href="https://loopkit.github.io/loopdocs/build/code_customization/#disable-siri-capabilities">this page here</a> of the LoopDocs and just do the exact opposite of what you see.</p>
+<p>Unless stated otherwise, all code done here is not by me, but by the amazing Loop community. I "specialise" in putting puzzle pieces together, and in mucking around in Terminal because, well, Terminal is fun. My branches are nothing more than the work of others, combined with the work of others.</p>
 <h3 id="spike-master"><a href="https://github.com/cyoung1024/loop/tree/spike-master">Spike-master</a></h3>
-<p>Loop master 1.9.6 with Spike client integrated</p>
+<p>Loop master 1.9.6 with Spike client integrated.</p>
 <h3 id="spike-master-x15"><a href="https://github.com/cyoung1024/loop/tree/spike-master-x15">Spike-master-x15</a></h3>
 <p>Loop master 1.9.6 with Spike client integrated and a fix for the Medtronic x15 models where, after a bolus, an erroneous message saying the pump responded unexpectedly and to retry was thrown.</p>
 <h3 id="omnipod-spike"><a href="https://github.com/cyoung1024/loop/tree/omnipod-spike">Omnipod-spike</a></h3>
-<p>Loop dev 1.10.0 with Spike client integrated</p>
+<p>Loop dev 1.10.0 with Spike client integrated.</p>
 <h3 id="dev-spike"><a href="https://github.com/cyoung1024/loop/tree/dev-spike">Dev-spike</a></h3>
-<p>Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix and includes Siri capabilities.</p>
+<p>Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix.</p>
 <h3 id="dev-spike-x15"><a href="https://github.com/cyoung1024/loop/tree/dev-spike-x15">Dev-spike-x15</a></h3>
-<p>Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix and includes Siri capabilities.</p>
+<p>Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix.</p>
 <h3 id="jojo-spike"><a href="https://github.com/cyoung1024/loop/tree/jojo-spike">Jojo-spike</a></h3>
 <p>Katie DiSimone's Jojo branch with Spike client integrated. Includes the Medtronic x15 fix.</p>
 <h3 id="jojo-beeps-spike"><a href="https://gitub.com/cyoung1024/loop/tree/jojo-beeps-spike">Jojo-beeps-spike</a></h3>
-<p>Katie DiSimone's Jojo-beeps branch with Spike client integrated. Does not include the Medtronic x15 fix, as the branch is geared towards an Omnipod feature where the pod beeps to confirm bolus delivery. Includes Siri capabilities.</p>
+<p>Katie DiSimone's Jojo-beeps branch with Spike client integrated. Does not include the Medtronic x15 fix, as the branch is geared towards an Omnipod feature where the pod beeps to confirm bolus delivery.</p>
 <h2 id="a-note-about-spike">A Note About Spike</h2>
 <p>Yes, for the 18 millionth time I am reminding you to <strong><em>read the Spike calibration notice before proceeding with any of these downloads</em></strong>. This document should be reviewed regularly, and religiously. You should be able to cite it in your sleep. Say it with me, folks : level, stable, and in range.</p>
 <p>You can find the notice in markdown format <a href="https://github.com/cyoung1024/Loop/blob/spike-master/SPIKE_CALIBRATION.md">here</a>, in Google docs format <a href="https://docs.google.com/document/d/1gmAJ4_NRaS6UUDnGDQbKy5klh0KB5SpHwgo6gzWM7ZU/edit?usp=sharing">here</a>, and on the Calibration tab up above.</p>
@@ -148,6 +150,7 @@
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js" defer></script>
+        <script src="../js/refreshUpdatesRepo.js" defer></script>
         <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
