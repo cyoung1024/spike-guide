@@ -31,6 +31,9 @@ And ***please, please, please*** be considerate when asking if I’ve done updat
 </p>
 </div>
 
+## How do I install the Spike branch ?
+Please check out [the LoopDocs](https://loopkit.github.io/loopdocs) for detailed, step-by-step installation instructions.
+
 ## Does Spike work offline
 Yes.
 
