@@ -23,12 +23,6 @@ And ***please, please, please*** be considerate when asking if I’ve done updat
 <b> Last dev-spike update : </b> <span class="dev-spike"> </span> </br>
 <b> Last dev-spike-x15 update : </b> <span class="dev-spike-x15"> </span>
 </p>
-<p> <b> Last jojo update : </b> <span class="jojo"> </span> </br>
-<b> Last jojo-spike update : </b> <span class="jojo-spike"> </span>
-</p>
-<p> <b> Last jojo-beeps update : </b> <span class="jojo-beeps"> </span> </br>
-<b> Last jojo-beeps-spike update : </b> <span class="jojo-beeps-spike"> </span>
-</p>
 </div>
 
 ## How do I install the Spike branch ?

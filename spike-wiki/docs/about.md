@@ -17,12 +17,6 @@ Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix.
 ### [Dev-spike-x15](https://github.com/cyoung1024/loop/tree/dev-spike-x15)
 Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix. **As of 27/10/2019, the dev branch has an x15 fix directly integrated into it. This branch will no longer be updated. Please move to dev-spike.**
 
-### [Jojo-spike](https://github.com/cyoung1024/loop/tree/jojo-spike)
-Katie DiSimone's Jojo branch with Spike client integrated. Includes the Medtronic x15 fix.
-
-### [Jojo-beeps-spike](https://gitub.com/cyoung1024/loop/tree/jojo-beeps-spike)
-Katie DiSimone's Jojo-beeps branch with Spike client integrated. Does not include the Medtronic x15 fix, as the branch is geared towards an Omnipod feature where the pod beeps to confirm bolus delivery.
-
 ## A Note About Spike
 Yes, for the 18 millionth time I am reminding you to ***read the Spike calibration notice before proceeding with any of these downloads***. This document should be reviewed regularly, and religiously. You should be able to cite it in your sleep. Say it with me, folks : level, stable, and in range.
 
