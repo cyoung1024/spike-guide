@@ -15,7 +15,7 @@ Loop dev 1.10.0 with Spike client integrated.
 Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix.
 
 ### [Dev-spike-x15](https://github.com/cyoung1024/loop/tree/dev-spike-x15)
-Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix.
+Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix. **As of 27/10/2019, the dev branch has an x15 fix directly integrated into it. This branch will no longer be updated. Please move to dev-spike.**
 
 ### [Jojo-spike](https://github.com/cyoung1024/loop/tree/jojo-spike)
 Katie DiSimone's Jojo branch with Spike client integrated. Includes the Medtronic x15 fix.
