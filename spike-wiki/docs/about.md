@@ -12,7 +12,7 @@ Loop master 1.9.6 with Spike client integrated and a fix for the Medtronic x15 m
 Loop dev 1.10.0 with Spike client integrated.
 
 ### [Dev-spike](https://github.com/cyoung1024/loop/tree/dev-spike)
-Loop dev 1.10.1 with Spike client integrated. Does not have Medtronic x15 fix.
+Loop dev 1.10.1 with Spike client integrated. As of 27/10/2019, this branch has the x15 fix directly integrated.
 
 ### [Dev-spike-x15](https://github.com/cyoung1024/loop/tree/dev-spike-x15)
 Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix. **As of 27/10/2019, the dev branch has an x15 fix directly integrated into it. This branch will no longer be updated. Please move to dev-spike.**
