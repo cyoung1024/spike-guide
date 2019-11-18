@@ -1,4 +1,10 @@
 # Spike + Loop Wiki
+
+>
+> **This section is for building your own Loop branch *from scratch*. If this *is not* what you want to do, please click on the *About The Spike Branches tab* and download a branch from there. If you post in the group asking questions about these instructions, please specifically state that you are in fact wanting to build your own branch from scratch. Thank you.**
+>
+**Warning : this guide is not up to date for Xcode 11 and iOS 13. I haven't had the time to update it yet, I'm very sorry. Please reach out to me if you run into trouble and can't find the equivalencies in Xcode 11.**
+
 This is a step-by-step guide on integrating the Spike client into any branch you're using. By implementing this method you agree to read the file SPIKE_CALIBRATION included in each version of this client (as well as under the Calibration page of this wiki) before proceeding, understand that you are integrating this client at your own risk, and agree not to use this client to make any medical decisions.
 
 ## System Requirements
