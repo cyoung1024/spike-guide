@@ -9,10 +9,10 @@ Loop master 2.0 with Spike client integrated.
 Loop master 1.9.6 with Spike client integrated and a fix for the Medtronic x15 models where, after a bolus, an erroneous message saying the pump responded unexpectedly and to retry was thrown. **As of 31/12/2019, the master branch has an x15 fix directly integrated into it. This branch will no longer be updated. Please move to spike-master.**
 
 ### [Omnipod-spike](https://github.com/cyoung1024/loop/tree/omnipod-spike)
-Loop dev 1.10.0 with Spike client integrated.
+Loop dev 1.10.0 with Spike client integrated. **This branch is no longer supported and will soon be removed, please update to spike-master.**
 
 ### [Dev-spike](https://github.com/cyoung1024/loop/tree/dev-spike)
-Loop dev 1.10.3 with Spike client integrated. As of 27/10/2019, this branch has the x15 fix directly integrated.
+Loop dev 2.1.0 with Spike client integrated. As of 27/10/2019, this branch has the x15 fix directly integrated.
 
 ### [Dev-spike-x15](https://github.com/cyoung1024/loop/tree/dev-spike-x15)
 Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix. **As of 27/10/2019, the dev branch has an x15 fix directly integrated into it. This branch will no longer be updated. Please move to dev-spike.**
