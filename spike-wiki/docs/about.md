@@ -5,17 +5,8 @@ Unless stated otherwise, all code done here is not by me, but by the amazing Loo
 ### [Spike-master](https://github.com/cyoung1024/loop/tree/spike-master)
 Loop master 2.0 with Spike client integrated.
 
-### [Spike-master-x15](https://github.com/cyoung1024/loop/tree/spike-master-x15)
-Loop master 1.9.6 with Spike client integrated and a fix for the Medtronic x15 models where, after a bolus, an erroneous message saying the pump responded unexpectedly and to retry was thrown. **As of 31/12/2019, the master branch has an x15 fix directly integrated into it. This branch will no longer be updated. Please move to spike-master.**
-
-### [Omnipod-spike](https://github.com/cyoung1024/loop/tree/omnipod-spike)
-Loop dev 1.10.0 with Spike client integrated. **This branch is no longer supported and will soon be removed, please update to spike-master.**
-
 ### [Dev-spike](https://github.com/cyoung1024/loop/tree/dev-spike)
 Loop dev 2.1.0 with Spike client integrated. As of 27/10/2019, this branch has the x15 fix directly integrated.
-
-### [Dev-spike-x15](https://github.com/cyoung1024/loop/tree/dev-spike-x15)
-Loop dev 1.10.1 with Spike client integrated. Has Medtronic x15 fix. **As of 27/10/2019, the dev branch has an x15 fix directly integrated into it. This branch will no longer be updated. Please move to dev-spike.**
 
 ## A Note About Spike
 Yes, for the 18 millionth time I am reminding you to ***read the Spike calibration notice before proceeding with any of these downloads***. This document should be reviewed regularly, and religiously. You should be able to cite it in your sleep. Say it with me, folks : level, stable, and in range.
