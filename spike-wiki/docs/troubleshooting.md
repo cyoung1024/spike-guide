@@ -34,11 +34,7 @@ If your Health settings are correct, try :
 * **A simple restart**. Close both Spike and Loop from the app switcher, turn the phone off and back on again, then reopen Spike and Loop in that order.
 
 ### Delayed CGM data, but green loop
-Because Spike and Loop's internal clocks aren't perfectly synced, it's not uncommon to get into a spot of looping off of 10 minute old data.
-
-For Libre users, click "on demand" in Spike to get a new reading while Loop is at 3 minutes.
-
-For Dexcom users, this "on demand" option is not available. There is a fix being tested in dev-spike to resolve this. If you're willing to keep up with frequent updates and report bugs when found, you could give dev-spike a try. But be warned that it is not as stable as a production branch.
+Because Spike and Loop's internal clocks aren't perfectly synced, it was not uncommon to get into a spot of looping off of 10 minute old data. However, since October 2019 for dev branch and January 2020 for master branch, there is a fix integrated for this. If you are still experiencing a delay in data, try updating your Loop branch to the newest available version.
 
 ### Still not working ?
 You can try a soft reset of the phone, or even delete Loop completely off of the phone and load it back on if you're in a tight spot and absolutely nothing is working, as a last ditch effort. Before you do that though, double check that your Loop app is displaying the correct version of Loop : it should be the original Loop version name plus `-spike` on the end. With all these new releases coming out, it's not unheard of that people mix up the folders or projects in Xcode and accidentally deploy the wrong version.
