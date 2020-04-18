@@ -5,10 +5,6 @@ nav:
 - Calibration: 'calibration.md'
 - The Spike Branches: 'about.md'
 - Troubleshooting: 'troubleshooting.md'
-- Build Your Own Spike Branch:
-  - 'Getting Started': 'diy/getting-started.md'
-  - 'Build': 'diy/build.md'
-  - 'Resources': 'diy/resources.md'
 markdown_extensions:
   - admonition
 theme: cinder
