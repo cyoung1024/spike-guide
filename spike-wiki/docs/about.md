@@ -3,7 +3,7 @@
 Unless stated otherwise, all code done here is not by me, but by the amazing Loop community. I "specialise" in putting puzzle pieces together, and in mucking around in Terminal because, well, Terminal is fun. My branches are nothing more than the work of others, combined with the work of others.
 
 ### [Spike-master](https://github.com/cyoung1024/loop/tree/spike-master)
-Loop master 2.2 with Spike client integrated.
+Loop master 2.2.1 with Spike client integrated.
 <div>
 <p> <b> Last master update : </b> <span class="master"> </span> </br>
 <b> Last spike-master update : </b> <span class="spike-master"> </span> </br>
